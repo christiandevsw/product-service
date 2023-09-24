@@ -1,5 +1,6 @@
-package com.dojo.product.service.app.model;
+package com.dojo.product.service.app.model.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -17,4 +18,7 @@ public class Category {
     private Long id;
     private String name;
     private String description;
+    @Lob
+    @JsonIgnore
+    private byte[] photo;
 }

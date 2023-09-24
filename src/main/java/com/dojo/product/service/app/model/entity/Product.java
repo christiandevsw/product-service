@@ -1,4 +1,4 @@
-package com.dojo.product.service.app.model;
+package com.dojo.product.service.app.model.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -8,6 +8,8 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "Products")
@@ -26,8 +28,6 @@ public class Product {
     @JsonIgnoreProperties(value = {"hibernateLazyInitializer","handler","name","description"})
     private Category category;
     private String description;
-    //tengo duda cual sea el tipo mas adecuado para beneficios
-    //private List<String> benefits=new ArrayList<>();
     private Integer stock;
     private Boolean available;
     @Lob

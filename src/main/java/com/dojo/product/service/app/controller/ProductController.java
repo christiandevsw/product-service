@@ -1,10 +1,9 @@
 package com.dojo.product.service.app.controller;
 
-import com.dojo.product.service.app.model.Category;
-import com.dojo.product.service.app.model.Product;
+import com.dojo.product.service.app.model.entity.Category;
+import com.dojo.product.service.app.model.entity.Product;
 import com.dojo.product.service.app.service.CategoryService;
 import com.dojo.product.service.app.service.ProductService;
-import com.dojo.product.service.app.utility.DetailProductMixin;
 import com.dojo.product.service.app.utility.ProductMixin;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -85,14 +84,15 @@ public class ProductController {
         if (product == null) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("No existe el producto");
         }
-        ObjectMapper objectMapper = new ObjectMapper();
-        objectMapper.addMixIn(Product.class, DetailProductMixin.class);
-        try {
-            return ResponseEntity.status(HttpStatus.OK).body(objectMapper.readTree(objectMapper.writeValueAsString(product)));
-        } catch (JsonProcessingException e) {
-            return ResponseEntity.status(HttpStatus.OK).body("Sin foto");
-        }
-//        return new ResponseEntity<Product>(product, HttpStatus.OK);
+        //corregire esto de abajo pa que me cargue la foto en detalle
+//        ObjectMapper objectMapper = new ObjectMapper();
+//        objectMapper.addMixIn(Product.class, DetailProductMixin.class);
+//        try {
+//            return ResponseEntity.status(HttpStatus.OK).body(objectMapper.readTree(objectMapper.writeValueAsString(product)));
+//        } catch (JsonProcessingException e) {
+//            return ResponseEntity.status(HttpStatus.OK).body("Sin foto");
+//        }
+        return new ResponseEntity<Product>(product, HttpStatus.OK);
     }
 
     @GetMapping("/list-by-price/{price}")

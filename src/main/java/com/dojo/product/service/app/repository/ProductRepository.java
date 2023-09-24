@@ -1,6 +1,6 @@
 package com.dojo.product.service.app.repository;
 
-import com.dojo.product.service.app.model.Product;
+import com.dojo.product.service.app.model.entity.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 

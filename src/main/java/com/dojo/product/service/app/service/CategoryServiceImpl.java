@@ -1,6 +1,6 @@
 package com.dojo.product.service.app.service;
 
-import com.dojo.product.service.app.model.Category;
+import com.dojo.product.service.app.model.entity.Category;
 import com.dojo.product.service.app.repository.CategoryRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;

@@ -1,6 +1,6 @@
 package com.dojo.product.service.app.service;
 
-import com.dojo.product.service.app.model.Category;
+import com.dojo.product.service.app.model.entity.Category;
 
 public interface CategoryService {
     Iterable<Category> listCategories();

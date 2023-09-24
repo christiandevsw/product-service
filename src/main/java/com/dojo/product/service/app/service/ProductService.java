@@ -1,6 +1,6 @@
 package com.dojo.product.service.app.service;
 
-import com.dojo.product.service.app.model.Product;
+import com.dojo.product.service.app.model.entity.Product;
 
 import java.util.List;
 
