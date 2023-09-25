@@ -32,6 +32,6 @@ build/
 ### VS Code ###
 .vscode/
 
-Customer.java
-Reservation.java
+src/main/java/com/dojo/product/service/app/model/entity/Customer.java
+src/main/java/com/dojo/product/service/app/model/entity/Reservation.java
 
