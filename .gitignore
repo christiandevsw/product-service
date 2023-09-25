@@ -32,6 +32,6 @@ build/
 ### VS Code ###
 .vscode/
 
-*Customer.java
-*Reservation.java
+Customer.java
+Reservation.java
 
